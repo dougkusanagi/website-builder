@@ -1,0 +1,11 @@
+{
+    "name": "sorrento/builderjs",
+    "require": {
+        "tijsverkoyen/css-to-inline-styles": "^2.2",
+        "aws/aws-sdk-php": "^3.235",
+        "php": ">7.3"
+    },
+    "config": {
+        "platform-check": false
+    }
+}

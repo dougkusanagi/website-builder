@@ -1,0 +1,37 @@
+{
+  "name": "acelle-builder",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ace": "0.0.42",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.6.0",
+    "file-loader": "^4.1.0",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "raw-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
+    "svg-url-loader": "^3.0.0",
+    "to-string-loader": "^1.1.5",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "ace-builds": "^1.4.12",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "js-beautify": "^1.13.0",
+    "popper.js": "^1.16.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^10"
+  }
+}

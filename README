@@ -1,0 +1,27 @@
+# Get quickly started
+For quickly get BuilderJS up and running, you can put the whole builderjs/ folder into your web root
+Then access it via its corresponding web URL. For example:
+
+`http://localhost/builderjs/`
+
+# Documentation
+BuilderJS comes with pre-compiled source files (JavaScript and other assets) included in a `dist/` folder
+Check out the `manual/` directory for our documentation in details
+Double click the `manual/index.html` file to open it in your browser
+
+# Sample scripts
+You can use any server scripting language for handling BuilderJS requests (SAVE, EXPORT, etc.)
+We have sample scripts in PHP for your reference.
+
+# Source
+BuilderJS comes with the original develoment bundle (in Node & Webpack) containing unminified source files
+You can find it in the src/ folder if you are familiar with Node & Webpack
+Check out the webpack.config.js file for more configuration details.
+
+Basically you can start working with the development bundle using the following commands:
+
+`npm install`
+`npm run build`
+`npx webpack --watch`
+
+Thank you

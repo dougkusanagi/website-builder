@@ -1,0 +1,177 @@
+5.0.7 / 2024-05-12
+==================
+
+ * Added: Bootstrap is no longer required, pure HTML is now supported for widgets
+ * Added: more base templates
+ * Added: new 'X' icon for former Twitter
+ * Added: more translation and language support
+ * Fixed: drag & drop issue with Safari
+ * Fixed: improved users' experience with drag & drop
+ * Fixed: reduced nested HTML in widgets, easier to maintain
+ * Fixed: older Outlook compatibility issues
+ * Fixed: reduced templates' filesize
+ * Fixed: PHP 7.3 compatibility issue with sample code
+ * Fixed: better CSS-inline examples for PHP as server-side scripting 
+ * Fixed: translation typos
+ * Fixed: image preview issue with certain browser
+
+5.0.6 / 2023-02-08
+==================
+
+ * Fixed: Outlook 2019 compatibility issues
+ * Fixed: image rendering issue with certain SVG formats
+ * Fixed: improved loading performance
+ * Fixed: duplicate CSS after saving
+ * Fixed: PHP 8.1 compatibility issue with sample code
+ * Fixed: sub-directory issue with images
+ * Fixed: more examples to deal with CSS-inline, cloud storage, etc.
+ * Fixed: more examples in PHP
+ * Fixed: Thunderbird compatibility issues
+ * Fixed: improved custom widget API
+ * Fixed: improved filemanager loading performance
+ * Fixed: detect 'root' parameter automatically in sample scripts (update)
+ * Fixed: more widgets and options
+
+5.0.3 / 2022-04-13
+==================
+
+ * Fixed: alignment issue with text block
+ * Fixed: image rendering issue with certain JPG formats
+ * Fixed: visibility issues with certain elements in mobile view
+ * Fixed: file manager issue with large files
+ * Fixed: loading issues with external assets
+ * Added: detect 'root' parameter automatically in sample scripts
+ * Added: more widgets and options
+ * Added: margin & padding options are now organized in a consistent way
+ * Added: more drag & drop visual effects
+ * Added: quick preview of RSS feeds
+ * Added: make & handle inline CSS in server scripts
+ * Added: more export options
+ * Added: more PRS-4 compliance
+
+5.0.2 / 2022-01-15
+==================
+
+ * Fixed: new base templates' structure
+ * Fixed: better compatibility with different email clients
+ * Fixed: broken UI in preview mode
+ * Fixed: UI glitches in MS Edge and older versions of IE
+ * Added: more base templates available
+ * Added: upload sample is included
+ * Added: more API methods added
+ * Added: more rendering options supported
+ * Added: more base widgets added
+
+4.0.6-p15 / 2021-03-17
+==================
+
+ * Fixed: background image issue
+ * Fixed: master background compatibility
+ * Added: loadHTML improved
+ * Added: updated documentation
+ * Added: deprecate renderTo() function
+ * Added: more widgets loaded by default
+ * Added: reduced assets' size
+ * Added: better loading indicators
+ * Added: more interactive effects
+ * Added: improved class inheritance structure
+ * Added: support for loading widget and runtime
+ * Changed: distributable directory structure
+ * Changed: certain required parameters are now optional
+ * Changed: root parameter is now required
+
+4.0.5 / 2021-02-24
+==================
+
+ * Fixed: alignment off for dragged & dropped content
+ * Fixed: certain types of tag do not align well
+ * Fixed: better organization of attributes box's controls
+ * Added: more sample templates (pricing, table, form, etc.)
+ * Added: more control over image sizing & position
+ * Added: more upload options
+ * Added: better canvas rendering mechanism
+ * Added: more field validation options
+
+4.0.4 / 2021-01-15
+==================
+ 
+ * Changed: IE is no longer supported
+ * Changed: fully chromium based browsers supported
+ * Changed: reduce package size for better loading performance
+
+4.0.2 / 2020-07-01
+==================
+
+ * Fixed: minor HTML glitches of block containers
+ * Fixed: duplicate element ID issue
+ * Fixed: thumbnail broken in certain browsers
+ * Fixed: better element alignment
+
+4.0.0 / 2020-06-10
+==================
+ 
+ * Fixed: performance issue when loading template
+ * Fixed: inline edit not working with HTML5 tag
+ * Fixed: CSS not rendered correctly
+ * Fixed: image upload not working with certain versions of TLS
+ * Fixed: better error notification to UI
+ * Added: new material icon set
+ * Added: supported builder mode
+
+3.0.0 / 2020-02-03
+==================
+
+ * Fixed: unexpected input boxes added to email content
+ * Fixed: reduce content size by eliminating irrelevant styles
+ * Fixed: reduce content size by content minifying
+ * Added: Save & Close button
+ * Added: control panel for custom tags
+ * Added: new icons set for controls
+ * Added: minifized icons now in place
+ * Added: new default themes/layouts
+
+2.2.0 / 2019-11-08
+==================
+
+ * Fixed: inline editor does not work for certain types of element
+ * Fixed: UI glitches on older versions of IE
+ * Fixed: compatibility issues with older version of IE
+ * Fixed: compatibility issues with older version of Opera
+ * Fixed: more compatible HTTP headers for Ajax requests
+ * Added: more flexible editor mode
+ * Added: more decoration widgets
+ * Added: more preview options
+ * Added: support adding selected item to library for reuse
+ * Added: support for HTTP 1.1 methods PUT, UPDATE, PATCH, DELETE
+ * Added: more SYNC options
+ * Added: convenient TAGS editing
+ * Added: better TAG autocommplete when typing
+ * Added: better TAG preview panel
+
+2.0.0 / 2019-09-23
+==================
+
+ * Added: responsive support for old email clients
+ * Added: full Edge 11 compatibility
+ * Added: design view supported for older browsers
+ * Added: template font issue per saving
+ * Added: more HTML widgets for the core library
+ * Added: template switching in design view
+ * Added: cloud synchronization support
+ * Added: more drag & drop visual effect 
+ * Fixed: open/click tracking not working correctly
+ * Fixed: custom widget does not preserve content
+
+1.0.0 / 2019-06-06
+==================
+
+ * Added: more layout widgets
+ * Added: full Opera compatibility
+ * Added: customizable headers for Ajax request
+ * Added: detection of invalid HTML structure
+ * Added: more HTML widgets for the core library
+ * Added: use cache to boost template load performance
+ * Added: sync options in construction parameters
+ * Added: double view support
+ * Added: source view with syntax highlight theme
+ * Added: the first publicly available version
