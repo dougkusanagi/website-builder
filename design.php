@@ -196,7 +196,7 @@ $distUrl = join_paths('/', $baseUrl, '/dist/');       // Constitute the final pa
             uploadTemplateCallback: function(response) {
                 window.location = response.url;
             },
-            saveUrl: 'save-simple.php', // Minimal save endpoint for shared hosting compatibility
+            saveUrl: 'save-backup.php', // Backup save with minimal headers
             saveMethod: 'POST',
             data: {
                 _token: 'CSRF_TOKEN',
