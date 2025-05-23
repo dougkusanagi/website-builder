@@ -1,0 +1,61 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Allow POST requests to PHP files
+<Files "*.php">
+    Order allow,deny
+    Allow from all
+    
+    # Increase limits for large POST requests
+    php_value post_max_size 50M
+    php_value upload_max_filesize 50M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_value memory_limit 256M
+</Files>
+
+# Specific rules for save scripts
+<Files "save-to-disk.php">
+    Order allow,deny
+    Allow from all
+    
+    # Enable error reporting for debugging (remove in production)
+    php_flag display_errors On
+    php_flag log_errors On
+</Files>
+
+# Allow CORS for AJAX requests
+<IfModule mod_headers.c>
+    SetEnvIf Origin "^https?://(.*\.)?guepardosys\.com\.br$" ORIGIN_SUB_DOMAIN=$1
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, X-Requested-With, Authorization"
+    Header always set Access-Control-Max-Age "3600"
+</IfModule>
+
+# Handle preflight requests
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Protect sensitive files
+<Files "composer.json">
+    Order deny,allow
+    Deny from all
+</Files>
+
+<Files "composer.lock">
+    Order deny,allow
+    Deny from all
+</Files>
+
+<Files "package.json">
+    Order deny,allow
+    Deny from all
+</Files>
