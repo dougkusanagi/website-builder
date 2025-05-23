@@ -18,43 +18,26 @@ $templateID = $_POST['template_id'];
 $type = $_POST['type'];
 
 // Get the directory path of the specified template on the hosting server
-$basePath = dirname(__FILE__) . "/templates/" . $type . "/" . $templateID;
-$path = $basePath . "/index.html";
+// Path may look like this: /storage/templates/{type}/{ID}/
+// In our sample templates, the HTML content is stored in the "index.html" file
+$path = dirname(__FILE__) . "/templates/" . $type . "/" . $templateID . "/index.html";
 
-// Add security headers
-header('X-Content-Type-Options: nosniff');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-XSS-Protection: 1; mode=block');
-
-// Check if the directory exists, if not create it
-if (!file_exists($basePath)) {
-    if (!mkdir($basePath, 0755, true)) {
-        header("HTTP/1.1 500");
-        echo json_encode(['message' => "Could not create directory: $basePath"]);
-        return;
-    }
-}
-
-// Check if the directory is writable
-if (!is_writable($basePath)) {
-    header("HTTP/1.1 403");
-    echo json_encode(['message' => "Directory is not writable: $basePath"]);
-    return;
-}
-
+// Check if the file exists. Throw an error otherwise!
 // Get the HTML content submitted from BuilderJS (when user clicks SAVE)
 $html = $_POST['content'];
 
-// Actually write the updated HTML content to the index.html file
-if (file_put_contents($path, $html) === false) {
-    header("HTTP/1.1 500");
-    echo json_encode(['message' => "Could not write to file: $path"]);
+if (!file_exists($path)) {
+    header("HTTP/1.1 404");
+    echo json_encode([ 'message' => "File not found: $path" ]);
     return;
 }
+
+// Actually write the updated HTML content to the index.html file
+file_put_contents($path, $html);
 
 // BuilderJS expects JSON response, so we need to set up the HTTP response' headers accordingly
 // And return 200 SUCCESS
 header("HTTP/1.1 200");
 header('Content-Type: application/json');
-echo json_encode(['success' => "Written to file {$path}"]);
+echo json_encode([ 'success' => "Written to file {$path}" ]);
 return;
